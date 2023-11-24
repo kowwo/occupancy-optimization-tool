@@ -27,6 +27,6 @@ public class OccupancyController {
     @GetMapping("/calculateOccupancy")
     public ResponseEntity<String> calculateOccupancy(@RequestParam("economyRooms") Integer economyRooms,
                                                      @RequestParam("premiumRooms") Integer premiumRooms) {
-        return ResponseEntity.ok(occupancyService.calculateRevenue(economyRooms, premiumRooms));
+        return ResponseEntity.ok(occupancyService.calculateRevenue(economyRooms, premiumRooms).toString());
     }
 }
